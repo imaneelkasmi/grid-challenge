@@ -1,0 +1,114 @@
+/* Variables Couleurs */
+:root {
+    --primaire: #DCDDE1;
+    --sombre: #475E92;
+    --claire: #ECEDF0;
+    --bg: #FFFDF8
+}
+
+/* General style */
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--sombre);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg);
+    margin: 30px 50px;
+    line-height: 1.4;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+h2,
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    background: var(--sombre);
+    padding: 0.8rem;
+    color: var(--claire);
+    font-size: 1.1rem;
+}
+
+img {
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 150px;
+}
+
+footer {
+    background: var(--sombre);
+    padding: 0.1rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    font-size: 1rem;
+    color: var(--claire);
+    text-align: center;
+}
+
+
+.boite {
+    background: var(--claire);
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+
+}
+
+.main-menu a:hover {
+    background: var(--sombre);
+    color: var(--claire);
+}
+
+.main-menu a {
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-align: center;
+    color: var(--sombre);
+    font-size: 1.1rem;
+    box-shadow: var(--shadow);
+}
+
+.main-menu ul {
+    list-style: none;
+}
+
+/*Mise en page Reactif via CSS/Grid et Media Query (Responsive Page Layout)*/
+
+.main-menu ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.boites {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-column-gap: 10px;
+}
+
+.services {
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .main-menu ul,
+    .boites {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-gap: 10px;
+    align-content: space-evenly;
+    }
+}
+
